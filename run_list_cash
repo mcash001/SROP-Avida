@@ -1,14 +1,24 @@
-#!/bin/bash
+set description 100_TestingQsub 
+set email mcash001@fiu.edu
+set freq_email Crash
+set priority 1
+set class_pref 150 
+set walltime 4
+set mem_request 4 
+set config_dir /mnt/home/f0000047/avida/cbuild/work/config/SROP-Avida 
+set beacon_priority y
+set dest_dir /mnt/home/f0000047/avida/cbuild/work/config
+
 # Run List for Avida Project Recreation
 
 # Test 1
 # Run configurations for Long Environment Cycle Length
-./avida -c avida-longENV.cfg
+1..50 LongENV ./avida -c avida-longENV.cfg
 
 # Test 2
 # Run configurations for Short Environment Cycle Length
-./avida -c avida-shortENV.cfg
+1..50 ShortENV ./avida -c avida-shortENV.cfg
 
 # Test 3
 # Run configurations for Control
-./avida -c avida.cfg
+1..50 Control ./avida -c avida.cfg
