@@ -1,0 +1,14 @@
+#!/bin/bash
+# Run List for Avida Project Recreation
+
+# Test 1
+# Run configurations for Long Environment Cycle Length
+./avida -c avida-longENV.cfg
+
+# Test 2
+# Run configurations for Short Environment Cycle Length
+./avida -c avida-shortENV.cfg
+
+# Test 3
+# Run configurations for Control
+./avida -c avida.cfg
